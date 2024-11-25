@@ -1,7 +1,7 @@
 # jenkins-docker-ssl
 
 Docker Container - Jenkins HTTPS secured Web-UI
-[GitHub repo][https://github.plus.ai/andy-ru/jenkins-docker-ssl](https://github.plus.ai/andy-ru/jenkins-docker-ssl)
+[GitHub repo][https://github.com/andy-ru/jenkins-docker-ssl](https://github.com/andy-ru/jenkins-docker-ssl)
 
 # About the Container
 
