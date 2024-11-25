@@ -1,0 +1,25 @@
+version: '3.7'
+services:
+  jenkins:
+    image: jenkins/jenkins:lts
+    container_name: jenkins-ssl
+    restart: always
+    user: root
+
+    # Ports exposed from Jenkins (external_host:container)
+    ports:
+     - 8081:8080
+     - 8443:8443
+     - 50000:50000
+
+    # Volumes - (external_host:container)
+    volumes:
+      - ./jenkins_home:/var/jenkins_home
+      - ./ssl:/var/jenkins_ssl/
+
+    # Environment Variables
+    environment:
+      JENKINS_OPTS: "--httpPort=-1 --httpsPort=8443 --httpsKeyStore=/var/jenkins_ssl/jenkins_keystore.jks --httpsKeyStorePassword=changeme"
+
+    restart: unless-stopped
+
